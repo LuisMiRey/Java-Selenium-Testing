@@ -1,0 +1,38 @@
+Test Netdata by Luis Miguel Romano Herrera 
+
+1) Choice of frameworks: why you made these specific choices.
+
+For this project I used Intellij IDE, JAVA language (SDK 16 version) and Maven. The reason is that 
+I am more familiar with this language for Selenium and maven is useful to make easier the packaging, download dependencies and have everything organized. 
+The project was run on windows system with the help of Bash and Ubunto terminal for windows to install Netdata and run linux commands. 
+
+2) Instructions for running the test: your code needs to be executable. Please include
+instructions to the reviewer in the form of steps needed (dependencies etc) in order to
+execute the test successfully.
+
+Attached is a zip file with all the files of my project. 
+We will need to have installed.
+-JAVA SDK 16 
+-Intellij IDE
+-Maven 3.8
+-Netdata
+-Selenium WebDriver 
+-ChromeDriver
+The main class is TestNetdata.java to be able to open the project depending if you are in windows,linux or mac to be able to update the ChromeDriver 
+for the version of your browser(TestNetdata.java line: 22) and edit the linux commands in (ExecuteStress.java line:10) to put the URL of your system 
+with the file tes_sys.sh. The tes_sys.sh file is in the selenium_01\src\main\java folder together. 
+
+
+What we will be doing is to be able to raise the disk_backlog.sdd with the instructions in Stress-ng in the execution we will have to wait 
+approximately 10 min for the values to stabilize and can check that the alarm is no longer there. 
+
+3) Smoke suite test plan: Assume you are in charge of quality for the following release of
+the agent. You have no time for a full regression test preparation and you want to
+concentrate on the most important features and verify that they work as expected for the
+upcoming release. Present a brief description of your test plan for this case.
+
+My test plan knowing in depth the agent would be to check that the page can be visualized UI, the sing in is working, 
+agent is running in real time, check main buttons like alerts, setting, system overview. In this way check the main user features. 
+
+4) Note possible improvements of your work, if any
+If it could be improved by packaging the whole program to be able to run it in one click. 
